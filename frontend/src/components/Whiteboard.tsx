@@ -72,9 +72,9 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center py-24">
       <h1 className="text-5xl font-extrabold leading-tight sm:text-extra">
-        Collabio
+        Samuhik Whiteboard
       </h1>
-      <h3 className="text-xl sm:text-2xl">Real-time whiteboard</h3>
+      <h3 className="text-xl sm:text-2xl">Collaborative whiteboard</h3>
 
       <div className="mt-10 flex flex-col gap-2">
         <label className="self-start font-bold leading-tight">
