@@ -5,4 +5,9 @@ import type {
   ServerToClientEvents,
 } from "../types/globals";
 
-export const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io();
+export const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io(
+  "http://localhost:8000",
+  {
+    transports: ["websocket", "polling"], // Allow both for better compatibility
+  },
+);

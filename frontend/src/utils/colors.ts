@@ -12,7 +12,7 @@ export const COLORS = {
   ORANGE: "#FF7300",
 };
 
-const COLORS_ARRAY = [...Object.values(COLORS)];
+export const COLORS_ARRAY = [...Object.values(COLORS)];
 
 export const getNextColor = (color?: string) => {
   const index = COLORS_ARRAY.findIndex((colorArr) => colorArr === color);

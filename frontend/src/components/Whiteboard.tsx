@@ -46,22 +46,22 @@ const Home = () => {
     setAtomRoomId("");
   }, [setAtomRoomId]);
 
-  const _handleCreateRoom = () => {
+  const handleCreateRoom = () => {
     socket.emit("create_room", username);
   };
 
-  const handleCreateRoom = () => {
+  const _handleCreateRoom = () => {
     const fakeRoomId = Math.random().toString(36).substring(2, 9);
     setAtomRoomId(fakeRoomId);
     navigate(`/${fakeRoomId}`);
   };
 
-  const _handleJoinRoom = (e: FormEvent<HTMLFormElement>) => {
+  const handleJoinRoom = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (roomId) socket.emit("join_room", roomId, username);
   };
 
-  const handleJoinRoom = (e: FormEvent<HTMLFormElement>) => {
+  const _handleJoinRoom = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (roomId) {
       setAtomRoomId(roomId);
